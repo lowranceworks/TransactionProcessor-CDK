@@ -3,13 +3,15 @@ import * as cdk from "@aws-cdk/core";
 import * as lambda from "@aws-cdk/aws-lambda";
 import * as sfn from "@aws-cdk/aws-stepfunctions";
 import * as sfnTasks from "@aws-cdk/aws-stepfunctions-tasks";
+import * as ecr from "aws-cdk/aws-ecr";
+import { EcrImageCode } from "@aws-cdk/aws-lambda";
 
 export class TransactionProcessorStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    // apigw
-
+    // ecr 
+    // const processPurchase = new ecr.
     
     // lambda 
     const processPurchase = new lambda.Function(this, "process purchase handler", {
